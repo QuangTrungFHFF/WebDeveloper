@@ -1,0 +1,9 @@
+body{
+    background-size: cover;
+    background-image: url("../Images/background001.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    border: 1px dotted blue;
+}

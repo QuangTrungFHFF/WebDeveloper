@@ -36,3 +36,8 @@
 #menu .active{
     background-color: red;
 }
+@media screen and (max-width: 600px){
+    #menu li{
+        float:none;
+    }
+}

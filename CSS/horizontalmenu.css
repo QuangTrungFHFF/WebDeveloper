@@ -17,11 +17,12 @@
 }
 #verticalList li a{
     text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:black;
     display: block;
-    padding: 8px 16px;
-    font-size: 2em;
-    text-align: center;    
+    padding: 8px 8px;
+    font-size: 1.25em;
+    text-align: left;    
 }
 #verticalList li a:hover{
     background-color:#333;

@@ -1,0 +1,33 @@
+.main{   
+    width: 15%; 
+    position: fixed;    
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    left:0;
+}
+#verticalList{
+    list-style-type: none;  
+    background-color:#ddd; 
+    width: 100%; 
+    margin:0;
+    padding: 0;
+    
+
+}
+#verticalList li a{
+    text-decoration: none;
+    color:black;
+    display: block;
+    padding: 8px 16px;
+    font-size: 2em;
+    text-align: center;    
+}
+#verticalList li a:hover{
+    background-color:#333;
+    color:white
+}
+#verticalList .active{
+    background-color: green;
+    color: white;
+}

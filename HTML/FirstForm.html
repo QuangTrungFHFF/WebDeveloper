@@ -4,23 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .form-container{
+            box-sizing: border-box;
+            border-radius: 7px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            width:50%;
+            margin:auto;            
+            padding: 20px 20px;
+            background-color:rgb(199, 195, 195);
+        }
+        input[type="text"], select{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+            border-width: 1px;
+            margin: 8px 0px;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 0.85em;
+        }
+        input[type="text"]:focus, select:focus{
+            border: 1px solid black;
+        }
+        input[type="submit"]{
+            width: 100%;            
+            margin-top: 5px;
+            margin-bottom:0;
+            background-color: #4CAF50;
+            border: none;
+            padding: 12px;
+            font-size: 1em;
+            color:white;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        input[type="submit"]:hover{
+            background-color:#45a049;
+        }
 
+
+    </style>
 </head>
 <body>
-    <form>
-        <span>First Name</span><br>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
-        <span>Last Name</span><br>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
-        <span>Country</span><br>
-        <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="germany">Germany</option>
-            <option value="vietnam">Vietnam</option>
-            <option value="italy">Italy</option>
-        </select>
-        <input type="submit" value="submit">
-    </form>
+    <h2>New form exercise</h2>
+    <div class="form-container">
+        <form>
+            <span>First Name</span><br>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+            <span>Last Name</span><br>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+            <span>Country</span><br>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="germany">Germany</option>
+                <option value="vietnam">Vietnam</option>
+                <option value="italy">Italy</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
     
 </body>
 </html>

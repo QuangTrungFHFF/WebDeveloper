@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Document</title>
     <style>
-        .tooltip{
-            position: relative; 
-            display:inline-block;
-            border-bottom:1px dotted black;
+        *{
+            box-sizing: border-box;
         }
-        .tooltip .tooltiptext{
+        body{
+            margin:0;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
             visibility: hidden;
             width: 120px;
             background-color: rgb(49, 46, 46);
@@ -19,20 +27,22 @@
             border-radius: 6px;
             padding: 5px 0;
             bottom: 100%;
-            left:50%;
+            left: 50%;
             margin-left: -60px;
             opacity: 0;
             transition: opacity 0.5s;
             position: absolute;
             z-index: 1;
         }
-        .tooltip:hover .tooltiptext{
+
+        .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1.0;
-            
+
         }
-        .tooltip .tooltiptext::after{
-            content:" ";
+
+        .tooltip .tooltiptext::after {
+            content: " ";
             position: absolute;
             top: 100%;
             left: 50%;
@@ -40,9 +50,38 @@
             border-width: 5px;
             border-style: solid;
             border-color: black transparent transparent transparent;
+        }
+        .gallery{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery:after{
+            content: "";
+            display: table;
+            clear: both;
 
         }
-        .tooltip .tooltiptext
+        .gallery div{  
+            margin: 0 1.66%;                     
+            float:left;
+            width:30%;
+                       
+        }
+        .gallery div img{            
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 8px 16px 0px black;              
+        }
+        @media only screen and (max-width: 400px) {
+            .gallery div{                
+                float: none;
+                width: 95%;
+                margin: auto;
+                margin-bottom: 20px;
+            }            
+        }
+        
     </style>
 </head>
 
@@ -50,6 +89,19 @@
     <h2>Tooltips exercise</h2>
     <div class="tooltip">Hover over me
         <span class="tooltiptext">Tooltips text</span>
-    </div>    
+    </div>
+    <div class="gallery">
+        <h2>Image Gallery</h2>
+        <div class="leftImg">
+            <img src="../Images/img_forest.jpg">
+        </div>
+        <div class="centerImg">
+            <img src="../Images/img_5terre.jpg">
+        </div>
+        <div class="rightImg">
+            <img src="../Images/lights600x400.jpg">
+        </div>
+    </div>
 </body>
+
 </html>

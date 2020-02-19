@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #container{
+            width: 600px;
+            height: 400px;
+            position: relative;
+            background-color: #6B5B95;
+            border-radius: 7px;
+        }
+        #animation{
+            width: 50px;
+            height: 50px;
+            border: 0;
+            border-radius: 7px;
+            position: absolute;
+            background-color: #FF6F61;
+            color:transparent;
+        }
+    </style>
+    <script>
+        function myMove(){
+            var element = document.getElementById("animation");
+            var posX = 0;
+            var posY = 0;
+            var id= setInterval(frame,5);
+            function frame(){
+                if(posX == 550 || posY == 350) {
+                clearInterval(id);
+                } else {
+                posX += 550/350;
+                posY++;
+                element.style.top = posY + 'px';
+                element.style.left = posX + 'px';
+                }
+            }            
+        }
+    </script>
+
+</head>
+<body>
+    
+    <h1>My First JavaScript Animation</h1>
+    <div id="container">
+        <div id="animation">My animation will go here</div>
+    </div>
+    <button type="button" onclick="myMove()">Click here</button>    
+</body>
+</html>

@@ -23,8 +23,24 @@
             position: absolute;
             background-color: #FF6F61;
             color:transparent;
+            font-size: 0;
+            
+            
         }
     </style>
+    
+
+</head>
+<body>
+    
+    <h1>My First JavaScript Animation</h1>
+    <div id="container">
+        <div id="animation">My animation will go here</div>
+    </div>
+    <button id="activebutton" type="button">Click here</button>    
+    <div id="information">
+        
+    </div>
     <script>
         function myMove(){
             var element = document.getElementById("animation");
@@ -42,15 +58,18 @@
                 }
             }            
         }
-    </script>
+        function myAlert(){
+            alert ("U have clicked the button!");
+        }
+        
+        var x = document.getElementById("activebutton");
+        x.addEventListener("click", myAlert);
+        x.addEventListener("click", myMove);
 
-</head>
-<body>
-    
-    <h1>My First JavaScript Animation</h1>
-    <div id="container">
-        <div id="animation">My animation will go here</div>
-    </div>
-    <button type="button" onclick="myMove()">Click here</button>    
+        var screenInfo = document.createElement("p");
+        screenInfo.appendChild(document.createTextNode("Height: " + screen.height + " | Width: " + screen.width + " | Color: " + screen.colorDepth + " bits."));
+
+        document.getElementById("information").appendChild(screenInfo);
+    </script>
 </body>
 </html>

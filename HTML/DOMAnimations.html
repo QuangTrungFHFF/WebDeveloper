@@ -65,6 +65,7 @@
         var x = document.getElementById("activebutton");
         x.addEventListener("click", myAlert);
         x.addEventListener("click", myMove);
+        x.addEventListener("change",myAlert);
 
         var screenInfo = document.createElement("p");
         screenInfo.appendChild(document.createTextNode("Height: " + screen.height + " | Width: " + screen.width + " | Color: " + screen.colorDepth + " bits."));
